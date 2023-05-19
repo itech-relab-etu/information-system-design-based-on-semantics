@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'io.carml:carml-engine:0.4.7'
+    implementation 'io.carml:carml-logical-source-resolver-jsonpath:0.4.7'
+    implementation 'io.carml:carml-logical-source-resolver-xpath:0.4.7'
+    implementation 'io.carml:carml-logical-source-resolver-csv:0.4.7'
+    implementation 'io.carml:carml-converters-jena:0.4.7'
+
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(11)
+}
